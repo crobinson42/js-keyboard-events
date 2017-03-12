@@ -69,7 +69,10 @@
 
       getKey(kc).classList.add('playing')
 
-      getSound(kc).play()
+      const sound = getSound(kc)
+
+      sound.currentTime = 0
+      sound.play()
     }
 
     const endTransition = e => {
